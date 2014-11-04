@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Converter.Models.Category>
+
+@{
+    ViewBag.Title = "Test";
+}
+<body>
+    <div>
+        @Html.DropDownList("CategorySet", (IEnumerable<SelectListItem>)ViewData["Types"])
+        <input type="text" name="TB" /> 
+    </div>
+</body>
