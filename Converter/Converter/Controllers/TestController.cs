@@ -10,6 +10,7 @@ namespace Converter.Controllers
     public class TestController : Controller
     {
         db1Entities context = new db1Entities();
+        Category categ = new Category();
         //
         // GET: /Test/
         public ActionResult Index()
@@ -20,9 +21,21 @@ namespace Converter.Controllers
         {
             var rows = from type in context.CategorySet
                        select type;
-            
             ViewData["Types"] = new SelectList(rows, "Id", "Category_Type", context.CategorySet);
-            return View(context.Category);
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Test(string TB)
+        {
+            int i = 0;
+            i = int.Parse(TB);
+            var rows = from type in context.CategorySet
+                       select type;
+            ViewData["Types"] = new SelectList(rows, "Id", "Category_Type", context.CategorySet);
+            
+            double res = i * categ.Value;
+            ViewBag.MyParam = res.ToString();
+            return View();
         }
 	}
 }
