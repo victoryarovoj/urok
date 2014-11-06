@@ -20,8 +20,6 @@
             <div class="col-md-10">
                 @Html.DropDownList("CategoryId", (IEnumerable<SelectListItem>)ViewData["Types"])
                 @Html.DropDownListFor(model => model.Category1, (IEnumerable<SelectListItem>)ViewData["Types1"])
-                
-
                 <input type="text" name="TB" />
                 <input type="submit" />
                 @ViewBag.MyParam
