@@ -16,12 +16,15 @@
         <select id="District" name="District"></select>
         @Html.ValidationMessage("District", "*")
 
+
+        @Html.Label("District1")
+        <select id="District1" name="District1"></select>
+        @Html.ValidationMessage("District1", "*")
         <p>
             <input type="submit" value="Create" id="SubmitId" />
         </p>
     </fieldset>
-    
-    <div id="pizda"></div>
+    @ViewBag.MyParam
     
 }
 @Scripts.Render("~/bundles/jquery")
@@ -34,7 +37,20 @@
                     items += "<option value='" + district.Value + "'>" + district.Text + "</option>";
                 });
                 $('#District').html(items);
-                $('#pizda').html += items;
+            });
+        });
+    });
+</script>
+@Scripts.Render("~/bundles/jquery")
+<script type="text/jscript">
+    $(function () {
+        $('#District').change(function () {
+            $.getJSON('/tst/DistrictList1/' + $('#District').val(), function (data) {
+                var items = '<option>Select a District</option>';
+                $.each(data, function (i, district1) {
+                    items += "<option value='" + district1.Value + "'>" + district1.Text + "</option>";
+                });
+                $('#District1').html(items);
             });
         });
     });
