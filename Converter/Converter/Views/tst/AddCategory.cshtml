@@ -1,0 +1,19 @@
+﻿@model Converter.Models.CategorySet
+
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+<h2>AddCategory</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    {
+       @Html.TextBox("name")
+       <input type="submit" value="ADD" />
+    }
+    @Html.ActionLink("AddParams", "AddParams")
+}
+

@@ -50,6 +50,5 @@ D:\vsTestPrj\urok\Converter\Converter\bin\Microsoft.Owin.Security.OAuth.xml
 D:\vsTestPrj\urok\Converter\Converter\bin\Microsoft.Owin.Security.Google.xml
 D:\vsTestPrj\urok\Converter\Converter\bin\Microsoft.Owin.Security.Twitter.xml
 D:\vsTestPrj\urok\Converter\Converter\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\vsTestPrj\urok\Converter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
 D:\vsTestPrj\urok\Converter\Converter\obj\Debug\Converter.dll
 D:\vsTestPrj\urok\Converter\Converter\obj\Debug\Converter.pdb

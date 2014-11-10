@@ -163,6 +163,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\tstController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -256,6 +257,12 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Test\Test.cshtml" />
+    <Content Include="Views\tst\Index.cshtml" />
+    <Content Include="Views\tst\Edit.cshtml" />
+    <Content Include="Views\tst\List.cshtml" />
+    <Content Include="Views\Test\AddCategory.cshtml" />
+    <Content Include="Views\tst\AddCategory.cshtml" />
+    <Content Include="Views\tst\AddParams.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
