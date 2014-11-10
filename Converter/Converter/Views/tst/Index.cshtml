@@ -4,9 +4,6 @@
 {
     <fieldset>
         <legend>DropDownList</legend>
-        @Html.Label("Name")
-        @Html.TextBox("Name")
-        @Html.ValidationMessage("Name", "*")
 
         @Html.Label("State")
         @Html.DropDownList("State", ViewBag.StateName as SelectList, "Select a State", new { id = "State" })
@@ -16,15 +13,19 @@
         <select id="District" name="District"></select>
         @Html.ValidationMessage("District", "*")
 
+        @Html.Label("Name")
+        @Html.TextBox("Name")
+        @Html.ValidationMessage("Name", "*")
 
         @Html.Label("District1")
         <select id="District1" name="District1"></select>
         @Html.ValidationMessage("District1", "*")
         <p>
-            <input type="submit" value="Create" id="SubmitId" />
+            <input type="submit" value="Convert" id="SubmitId" /> @ViewBag.MyParam
         </p>
+        @Html.ActionLink("List", "List") @Html.ActionLink("AddCategory", "AddCategory") @Html.ActionLink("AddParams", "AddParams")
     </fieldset>
-    @ViewBag.MyParam
+    
     
 }
 @Scripts.Render("~/bundles/jquery")

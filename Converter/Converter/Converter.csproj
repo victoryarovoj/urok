@@ -258,6 +258,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Test\Test.cshtml" />
     <Content Include="Views\tst\Index.cshtml" />
+    <Content Include="Views\tst\Edit.cshtml" />
+    <Content Include="Views\tst\List.cshtml" />
+    <Content Include="Views\Test\AddCategory.cshtml" />
+    <Content Include="Views\tst\AddCategory.cshtml" />
+    <Content Include="Views\tst\AddParams.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
