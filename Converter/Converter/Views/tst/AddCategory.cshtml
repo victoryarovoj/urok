@@ -1,19 +1,27 @@
 ﻿@model Converter.Models.CategorySet
 
-@{
-    ViewBag.Title = "AddCategory";
-}
+<body class="container">
 
-<h2>AddCategory</h2>
+    @Html.Partial("Navbar")
 
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
+    @using (Html.BeginForm())
     {
-       @Html.TextBox("name")
-       <input type="submit" value="ADD" />
-    }
-    @Html.ActionLink("AddParams", "AddParams")
-}
+        <div class="col-md-3"></div>
+        <div class="text-center col-md-6">
+            <p>
+                <h3>Add new category:</h3>
+            </p>
+            @Html.AntiForgeryToken()
+            <p>
+                @Html.TextBox("name", null, new { @class = "form-control" })
+            </p>
 
+            <hr />
+
+            <input type="submit" class="btn btn-danger" value="Okay" />
+
+        </div>
+        <div class="col-md-3"></div>
+    }
+
+</body>

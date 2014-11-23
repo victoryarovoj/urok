@@ -52,3 +52,4 @@ D:\vsTestPrj\urok\Converter\Converter\bin\Microsoft.Owin.Security.Twitter.xml
 D:\vsTestPrj\urok\Converter\Converter\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\vsTestPrj\urok\Converter\Converter\obj\Debug\Converter.dll
 D:\vsTestPrj\urok\Converter\Converter\obj\Debug\Converter.pdb
+D:\vsTestPrj\urok\Converter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache

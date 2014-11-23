@@ -1,39 +1,49 @@
-﻿@Html.ValidationSummary("Please correct the errors and try again.")
+﻿<body class="container" style="background-color:#00ffff">
 
-@using (Html.BeginForm())
-{
-    <fieldset>
-        <legend>DropDownList</legend>
+    @Html.Partial("Navbar")
 
-        @Html.Label("State")
-        @Html.DropDownList("State", ViewBag.StateName as SelectList, "Select a State", new { id = "State" })
-        @Html.ValidationMessage("State", "*")
+    @using (Html.BeginForm())
+    {
+        <div class="col-md-3"></div>
+        <div class="text-center col-md-6">
+            <p>
+                <h3>Select a state:</h3>
+                @Html.DropDownList("State", ViewBag.StateName as SelectList, new { @class = "form-control", id = "State" })
+                <hr />
+            </p>
+            <p>
+                <h3>Select a district:</h3>
+                <select id="District" class="form-control" name="District"></select>
+                <hr />
+            </p>
+            <p>
+                <h3>Select a value:</h3>
+                @Html.TextBox("Name", null, new { @class = "form-control" })
+                <hr />
+            </p>
+            <p>
+                <h3>Select a result district:</h3>
+                <select id="District1" class="form-control" name="District1"></select>
+                <hr />
+            </p>
 
-        @Html.Label("District")
-        <select id="District" name="District"></select>
-        @Html.ValidationMessage("District", "*")
+            <input type="submit" class="btn btn-danger" value="Convert" id="SubmitId" />
 
-        @Html.Label("Name")
-        @Html.TextBox("Name")
-        @Html.ValidationMessage("Name", "*")
+            <p><h3>Result value:</h3></p>
 
-        @Html.Label("District1")
-        <select id="District1" name="District1"></select>
-        @Html.ValidationMessage("District1", "*")
-        <p>
-            <input type="submit" value="Convert" id="SubmitId" /> @ViewBag.MyParam
-        </p>
-        @Html.ActionLink("List", "List") @Html.ActionLink("AddCategory", "AddCategory") @Html.ActionLink("AddParams", "AddParams")
-    </fieldset>
-    
-    
-}
+            <p><h3>@ViewBag.MyParam</h3></p>
+
+            <p><h3>тут треба ше величину написати</h3></p>
+        </div>
+        <div class="col-md-3"></div>
+    }
+</body>
 @Scripts.Render("~/bundles/jquery")
 <script type="text/jscript">
     $(function () {
         $('#State').change(function () {
             $.getJSON('/tst/DistrictList/' + $('#State').val(), function (data) {
-                var items = '<option>Select a District</option>';
+                var items;
                 $.each(data, function (i, district) {
                     items += "<option value='" + district.Value + "'>" + district.Text + "</option>";
                 });
@@ -47,7 +57,7 @@
     $(function () {
         $('#District').change(function () {
             $.getJSON('/tst/DistrictList1/' + $('#District').val(), function (data) {
-                var items = '<option>Select a District</option>';
+                var items;
                 $.each(data, function (i, district1) {
                     items += "<option value='" + district1.Value + "'>" + district1.Text + "</option>";
                 });

@@ -113,8 +113,9 @@ namespace Converter.Controllers
             int i = 0;
             i = int.Parse(Name);
 
-            double res = (i * item1.Value) * item.Value;
-            ViewBag.MyParam = res.ToString();
+            double res = i / item.Value * item1.Value;
+            ViewBag.MyParam = res.ToString() + " " + item1.Category1;
+            
 
             List<SelectListItem> state = new List<SelectListItem>();
             foreach (var item4 in contex.CategorySet)
